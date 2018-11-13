@@ -76,9 +76,18 @@ def save_to_json(structure):
         with open(FILE_PATH, 'w') as outfile:
             json.dump(structure, outfile)
         outfile.close()
-
         print "Correctly saved data to JSON file."
-    except e:
+        
+    except IOError:
+        print('An error occured trying to read the file.')
+        
+    except ValueError:
+        print('Non-numeric data found in the file.')
+        
+    except KeyboardInterrupt:
+        print 'You cancelled the operation.'
+
+    except:
         print "Something went wrong with your JSON file."
 
 
@@ -108,13 +117,12 @@ def generate_folds(X, y):
 
     fold = 0
     for train_index, test_index in kf.split(X_train):
-        structure[str(fold)] = dict()
-        structure[str(fold)]['train'] = X_train[train_index].tolist()
-        structure[str(fold)]['test'] = X_train[test_index].tolist()
+        structure[fold] = dict()
+        structure[fold]['train'] = X_train[train_index].tolist()
+        structure[fold]['test'] = X_train[test_index].tolist()
         fold += 1
 
     print "Folds generated."
-    print structure["9"].keys()
     save_to_json(structure)
     
 
