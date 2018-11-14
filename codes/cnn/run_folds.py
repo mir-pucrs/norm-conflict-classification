@@ -12,6 +12,7 @@ NB_CLASSES = 5
 NB_EPOCH = 100000
 N_FOLDS = 10
 BASE_MODEL_PATH = 'cnn_models/cnn_model_'
+K_FOLD = True
 
 
 def train_cnn(fold, X_train, X_val, y_train, y_val):
@@ -58,7 +59,7 @@ def write_results(best_fold, high_acc, min_loss, mean_acc, mean_loss):
         print "Just wrote the results file."
 
 
-def run_test(fold, X_test, y_test):
+def run_test(fold, X_test, y_test, k_fold=False):
 	
 	# Get model.
 	model = get_model(MAXLENGTH, nb_classes=NB_CLASSES)
@@ -68,11 +69,13 @@ def run_test(fold, X_test, y_test):
 	y_test = np_utils.to_categorical(y_test, NB_CLASSES)
 
 	# Set the output file.
-	output = open('cnn_test_result.txt', 'w')
+    if k_fold:
+        output = open('cnn_test_result_k_fold.txt', 'a')
+	else:
+        output = open('cnn_test_result.txt', 'w')
 
 	# Run over test set.
 	for i in range(len(X_test)):
-            print "Processing %d\n" % i		
             matrix = turn_pair_matrix(X_test[i], MAXLENGTH)
 
             pred = model.predict(matrix)
@@ -89,8 +92,9 @@ def run_folds(k_fold=False):
     read_folds.DATA_PATH[read_folds.ID_CONF],
     read_folds.DATA_PATH[read_folds.ID_N_CONF])
 
-    # Get test set.
-    X_test, y_test = folds.read_test()
+    if not k_fold:
+        # Get test set.
+        X_test, y_test = folds.read_test()
 
     best_fold = None
     high_acc = 0
@@ -121,8 +125,10 @@ def run_folds(k_fold=False):
         if loss < min_loss:
             min_loss = loss
             best_fold = key
+        elif k_fold:
+            run_test(key, X_val, y_val, k_fold=k_fold)
         else:
-        # Remove the model.
+            # Remove the model.
             os.remove(BASE_MODEL_PATH + str(key))
 
     mean_acc = mean_acc/N_FOLDS
@@ -130,8 +136,9 @@ def run_folds(k_fold=False):
 
     write_results(best_fold, high_acc, min_loss, mean_acc, mean_loss)
 
-    run_test(best_fold, X_test, y_test)
+    if not k_fold:
+        run_test(best_fold, X_test, y_test)
 
 
 if __name__ == '__main__':
-    run_folds()
+    run_folds(k_fold=K_FOLD)
