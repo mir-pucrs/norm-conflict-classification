@@ -13,7 +13,7 @@ from sklearn.model_selection import train_test_split
 
 # Constants.
 CONF_PATH = '../../data/db_conflicts.csv'
-N_CONF_PATH = '../../data/db_non_conflicts_index.csv'
+N_CONF_PATH = '../../data/db_non_conflicts.csv'
 CONF_FILE = '2'
 N_CONF_FILE = '1'
 N_CONF_CLASS = 0
