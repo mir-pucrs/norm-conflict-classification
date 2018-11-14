@@ -5,8 +5,8 @@ import pandas as pd
 
 # Constants.
 FOLDS_PATH = '../../data/10-fold.json'
-DATA_PATH = {'2': '../../data/db_conflicts.csv',
-             '1': '../../data/db_non_conflicts_index.csv'}
+DATA_PATH = {'2': '/usr/share/datasets/conflicts/db_conflicts.csv',
+             '1': '/usr/share/datasets/conflicts/db_non_conflicts.csv'}
 ID_CONF = '2'
 ID_N_CONF = '1'
 N_CONF_CLASS = 0
@@ -33,6 +33,8 @@ class Folds():
         for elem_id in ids_list:
             x, y = self.read_id(elem_id)
             X.append(x)
+            if y > 1:
+                y = y - 1 
             Y.append(y)
 
         return X, Y
@@ -54,11 +56,15 @@ class Folds():
         for elem_id in train:
             x, y = self.read_id(elem_id)
             X_train.append(x)
+            if y > 1:
+                y = y - 1
             y_train.append(y)
 
         for elem_id in test:
             x, y = self.read_id(elem_id)
             X_test.append(x)
+            if y > 1:
+                y = y - 1  
             y_test.append(y)
 
         return X_train, X_test, y_train, y_test
