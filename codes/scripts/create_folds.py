@@ -20,7 +20,8 @@ N_CONF_CLASS = 0
 RAND_STATE = 22
 N_SPLITS = 10
 TEST_SIZE = 0.1
-FILE_PATH = '../../data/10-fold.json'
+FILE_PATH = '../../data/K-fold.json'
+K_FOLD = True
 
 
 def process_data(df, conflict=True):
@@ -92,7 +93,7 @@ def save_to_json(structure):
 
 
 
-def generate_folds(X, y):
+def generate_folds(X, y, k_fold=False):
     """
         Use X and y to generate a dictionary-like and save as fold division.
         
@@ -104,22 +105,30 @@ def generate_folds(X, y):
 
     structure = dict() # Save folds.
 
-    # Divide data into folds and test set.
-    X_train, X_test, y_train, y_test = train_test_split(X, y,
-        test_size=TEST_SIZE, random_state=RAND_STATE)
-
-    # Insert test.
-    structure['test'] = X_test.tolist()
-
-    # Divide X_train into folds.
+    # Divide data into folds.
     kf = KFold(n_splits=N_SPLITS, random_state=RAND_STATE)
-    kf.get_n_splits(X_train)
+
+    if not k_fold:
+        # Divide data into folds and test set.
+        X_train, X_test, y_train, y_test = train_test_split(X, y,
+            test_size=TEST_SIZE, random_state=RAND_STATE)
+
+        # Insert test.
+        structure['test'] = X_test.tolist()
+
+        split = kf.split(X_train)
+    else:
+        split = kf.split(X)
 
     fold = 0
-    for train_index, test_index in kf.split(X_train):
+    for train_index, test_index in split:
         structure[fold] = dict()
-        structure[fold]['train'] = X_train[train_index].tolist()
-        structure[fold]['test'] = X_train[test_index].tolist()
+        if not k_fold:
+            structure[fold]['train'] = X_train[train_index].tolist()
+            structure[fold]['test'] = X_train[test_index].tolist()
+        else:
+            structure[fold]['train'] = X[train_index].tolist()
+            structure[fold]['test'] = X[test_index].tolist()
         fold += 1
 
     print "Folds generated."
@@ -144,7 +153,7 @@ def main():
         y_1[:len(df)]
     
     # Generate folds.
-    generate_folds(X, y)
+    generate_folds(X, y, k_fold=K_FOLD)
 
 
 if __name__ == '__main__':
