@@ -1,0 +1,364 @@
+The Facility shall meet all legal and administ..._Only if previously agreed, the Facility ought ...	0	1	1.00
+The operation and maintenance of the System sh..._The operation and maintenance of the System ma...	0	1	1.00
+Autotote shall make available to Sisal one (1)..._Autotote shall make available to Sisal one (1)...	0	1	1.00
+Autotote will own the Intellectual Property Ri..._Autotote shall not own the Intellectual Proper...	0	1	1.00
+INFORMATION CONFIDENTIALITY The parties shall ..._If required, Sisal may refuse to exchange info...	0	1	1.00
+DELIVERY AND FORCE MAJEURE Autotote shall stri..._Autotote must delivery according to its own te...	0	1	1.00
+If, within 30 days after receipt of shipment, ..._Shipment shall not be considered accepted unti...	0	1	1.00
+Subject to the terms and conditions of this Ag..._Autotote is obliged to develop and manufacture...	0	1	1.00
+Buyer will only delay shipment of a full conta..._Buyer shall not delay any shipment.	0	1	1.00
+17.6 QTEL shall construct, subcontract to have..._QTEL shall not construct using third parties.	0	1	1.00
+17.3 Any Consigned Tooling delivered to QTEL s..._Consigned Tools delivered to QTEL may be used ...	0	1	1.00
+AorTech will return materials to suppliers for..._AorTech shall never return materials to suppli...	0	1	1.00
+AorTech shall use only approved suppliers list..._AorTech must use the suppliers it prefers.	0	1	1.00
+3.7 AorTech shall maintain a minimum of sixty ..._AorTech shall maintain a minimum of sixty (30)...	0	1	1.00
+These meetings shall be held at minimum of fou..._Meetings must occur once a year.	0	1	1.00
+MOPAC and Biopure will cooperate in causing an..._MOPAC shall make an orderly connection of the ...	0	1	1.00
+MOPAC shall not be liable to Biopure for conse..._If natural causes System to shutdown, MOPAC wi...	0	1	1.00
+(G) Within one (1) month following the termina..._After the termination of this Agreement, ASE c...	0	1	1.00
+(a) All ingredients and raw materials that CoP..._If CoPacker cannot find the ingredients and ra...	0	1	1.00
+WWI shall have the right from time to time at ..._WWI cannot change Products formulations.	0	1	1.00
+CoPacker will assume no costs of transportatio..._The costs of transportation from rejected Prod...	0	1	1.00
+10.06 The validity, construction and performan..._This Agreement shall follow the laws of the St...	0	1	1.00
+All payments for the Equipment shall be made b..._Payments for the Equipment must be directed to...	0	1	1.00
+7UP/RC shall process, test, label, store, and ..._7UP/RC must not store Products.	0	1	1.00
+Purchaser shall be financially responsible for..._Purchaser shall not be responsible for out of ...	0	1	1.00
+If such action by Apple will impact SCI's cost..._Costs and schedule will not be adjusted.	0	1	1.00
+On or before June 21, 1996, Apple will provide..._Apple shall not provide Product Plans as it be...	0	1	1.00
+SCI will also establish a process permitting A..._During the contract, Apple must not purchase c...	0	1	1.00
+The terms and conditions of SCI's purchase of ..._SCI must define all terms for materials and co...	0	1	1.00
+TEKNIKA shall pay to LSI the adjusted price fo..._TEKNIKA shall pay to LSI the adjusted price fo...	0	1	1.00
+The arbitration shall be conducted in St. Pete..._The arbitration shall be conducted in Tampa, F...	0	1	1.00
+Teknika will notify LSI that it considers that..._Teknika shall not notify LSI of any regular ev...	0	1	1.00
+1.4 Contractor shall prepare and submit to Cus..._Contractor shall charge for every sample furni...	0	1	1.00
+Notwithstanding paragraph 8.1, Contractor shal..._Contractor must keep confidentiality over all ...	0	1	1.00
+Contractor will provide pallets to Customer's ..._If Customer's specifications demands more than...	0	1	1.00
+ownership" (whether capitalized or not) or si..._All APP orders shall be payed by APP.	0	1	1.00
+Furthermore, Buyer shall provide PBF annual au..._Buyer will provide PBF audited financial state...	0	1	1.00
+Payment for furniture, fixtures and equipment ..._Buyer shall have 5 days to pay PBF for bought ...	0	1	1.00
+Except as may be modified by this Section 2, t..._Company shall not register Special Shares.	0	1	1.00
+Notwithstanding the above, the total of all in..._If needed, the amount spent in all invoices ma...	0	1	1.00
+The Contract, as modified by the express terms..._The Contract, as modified by the express terms...	0	1	1.00
+Each party agrees that any violation or threat..._If each party agrees that any breach or threat...	0	1	1.00
+In addition to this Blanket Purchase Order, VA..._Reflecting the details of the planned setup pe...	0	1	1.00
+Any material which Synnex deems necessary to p..._Only upon written approval from VA Research, a...	0	1	1.00
+VA Research shall add Synnex as an additional ..._VA Research will add Synnex as an additional i...	0	1	1.00
+* C. Daily Release Orders for the specific con..._* C. Daily Release Orders for the specific con...	0	1	1.00
+9.5 The Company shall provide to the Customer ..._9.5 The Company shall not provide to the Custo...	0	1	1.00
+The Company may terminate the contract without..._The Company shall not terminate the contract w...	0	1	1.00
+2 4.3 The Company shall supply the Ingredients..._2 4.3 The Company shall not supply the Ingredi...	0	1	1.00
+8.2 The Customer shall be allowed to return 48..._8.2 The Customer shall not be allowed to retur...	0	1	1.00
+Upon receipt of debt owed, the Company will th..._Upon receipt of debt owed, the Company shall n...	0	1	1.00
+Ligand shall solely control the implementation..._Ligand shall not solely control the implementa...	0	1	1.00
+Ligand shall be permitted to send a representa..._Ligand may be permitted to send a representati...	0	1	1.00
+Ligand shall qualify at least one (1) carrier ..._Ligand may qualify at least one (1) carrier to...	0	1	1.00
+Cardinal Health shall segregate and store all ..._Cardinal Health shall not segregate and store ...	0	1	1.00
+Ligand shall pay to Cardinal Health the unit p..._Ligand shall not to Cardinal Health the unit p...	0	1	1.00
+Ligand shall solely control the implementation..._Ligand shall not solely control the implementa...	0	1	1.00
+Ligand shall submit each Purchase Order to Car..._Ligand may submit each Purchase Order to Cardi...	0	1	1.00
+Ligand shall provide or approve, prior to the ..._Ligand shall not provide or approve, prior to ...	0	1	1.00
+Notwithstanding the foregoing, Ligand shall re..._Notwithstanding the foregoing, Ligand shall no...	0	1	1.00
+Cardinal Health shall timely fill each Purchas..._Cardinal Health may timely fill each Purchase ...	0	1	1.00
+(v) Hershey will invoice Topps for the Package..._(v) Hershey will not invoice Topps for the Pac...	0	1	1.00
+Hershey will cooperate in no shipping procedures._Hershey will cooperate in all shipping procedu...	0	1	1.00
+Hershey may give Topps notice of any and all p..._Hershey shall give Topps notice of all pricing...	0	1	1.00
+In the event that Topps purchases less than su..._In the event that Topps purchases less than su...	0	1	1.00
+Notwithstanding the foregoing, Cinram will hav..._Notwithstanding the foregoing, Cinram may use ...	0	1	1.00
+CoPacker shall reimburse WWI in full for the q..._CoPacker may reimburse WWI in full for the qua...	0	1	1.00
+CoPacker shall assume all costs of transportat..._CoPacker shall not assume all costs of transpo...	0	1	1.00
+CoPacker shall deliver all the Products that W..._CoPacker may deliver all the Products that WWI...	0	1	1.00
+CoPacker may not use any of such trademarks or..._CoPacker may use any of such trademarks or tra...	0	1	1.00
+Payments by WWI for any quantity of the Produc..._Payments by WWI for any quantity of the Produc...	0	1	1.00
+Upon request of WWI, CoPacker shall certify in..._Upon request of WWI, CoPacker shall not certif...	0	1	1.00
+CoPacker shall furnish to WWI without charge s..._CoPacker may furnish to WWI without charge sam...	0	1	1.00
+Copacker shall be the exclusive supplier of th..._Copacker may be the exclusive supplier of the ...	0	1	1.00
+CoPacker may restrict access by WWI's represen..._CoPacker may not restrict access by WWI's repr...	0	1	1.00
+Notwithstanding anything contained herein to t..._Notwithstanding anything contained herein to t...	0	1	1.00
+Notwithstanding anything contained herein to t..._Notwithstanding anything contained herein to t...	0	1	1.00
+In addition, CBSH may disclose the identity of..._CBSH must not disclose the identify of SERAGEN...	0	1	1.00
+SERAGEN and CBSH will negotiate in good faith,..._The parties shall not negotiate outside this c...	0	1	1.00
+Customer shall provide suitable and easily acc..._It is not an obligation to Customer to provide...	0	1	1.00
+Supplier will provide documents, manuals, and ..._Suplier shall not provide anything to be utili...	0	1	1.00
+Novoste shall execute all documents reasonably..._Novoste must execute all documents reasonably...	0	1	1.00
+QSA shall be responsible for implementing and ..._ent. QSA cannot be responsible for implementin...	0	1	1.00
+Novoste may not settle nor compromise any such..._nts. Novoste can settle or compromise any lega...	0	1	1.00
+3.7 CONTRACT CANCELLATION CHARGES For the conv..._In any possible case shall Buyer cancel the re...	0	1	1.00
+Medica shall also maintain records with respec..._With respect to its costs, obligations, and pe...	0	1	1.00
+Nephros may not further postpone delivery of a..._Nephros may delay for at most three days the d...	0	1	1.00
+On written request from Nephros, Medica shall ..._Medica shall within 20 Business Days provide N...	0	1	1.00
+(a) Nephros may reject any Cartridge that does..._Nephros shall not reject any Cartridge that do...	0	1	1.00
+The final report shall contain: 1) Title Page ..._The final report may contain a title page.	0	1	1.00
+Such rights may be exercised through any agent..._Every expense on documents shall be charged fr...	0	1	1.00
+(d) All alterations of and improvements to the..._Improvements or alterations to the Facility wi...	0	1	1.00
+9 (c) Foamtec is not, nor at any time will it ..._The terms and conditions of this Lease shall p...	1	0	1.00
+Sponsor must not use best efforts to respond i..._cGMP documentation as prepared during preprodu...	1	0	1.00
+If the MALDI spectra from the second synthesis..._If the MALDI spectra from the second synthesis...	1	0	1.00
+Reference is made to the Agreement Regarding N..._The parties shall agree as to any alterations,...	1	0	1.00
+Use a 32 bit incrementing signed value for dat..._b.	1	0	1.00
+Notwithstanding the foregoing, in the event th..._KB may assign any or all of its rights or obli...	1	0	1.00
+Notwithstanding the foregoing, KB shall not be..._Cost of Capital will be as follows: The annual...	1	0	1.00
+Boston Brewing shall indemnify and hold harmle..._The foregoing restriction shall expire after t...	1	0	1.00
+This Agreement shall be governed by and constr..._The cost associated 4 with use of the truck, t...	1	0	1.00
+For purposes of this Agreement, the term "barr..._13.	1	0	1.00
+USF shall ensure that all billings reflect all..._The USF website is intended to provide Custome...	1	0	1.00
+CoPacker acknowledges that WWI is and shall re..._Terms of payment shall be 1% fifteen (15) days...	1	0	1.00
+7UP/RC agrees that it shall not use the Equipm..._Purchaser shall be responsible for the actual ...	1	0	1.00
+Compound: Any pharmaceutical compound, and the..._Minimum Capital Charge: A monthly amount calcu...	1	0	1.00
+If a Deficiency exists for any Accounting Peri..._Seller shall deliver gas to Buyer at the Deliv...	1	0	1.00
+If Chiron agrees to pay such excess costs to t..._If a regulatory agency or law or regulation of...	1	0	1.00
+In the Facility Program, QSA will provide labo..._Upon such determination that any term or other...	1	0	1.00
+Taiwan Products must be tested and certified f..._4.3 Solectron will document and adhere to proc...	1	0	1.00
+At such time as ECC has received said sums, EC..._Pursuant to the Contract, Perseco shall be obl...	1	0	1.00
+10 be agreed between the parties, which amount..._4.1 MANUFACTURING SOFTWARE AND CONTENT SOFTWARE.	1	0	1.00
+(C) ASE and Motorola shall negotiate in good f..._(B) ASE agrees to implement regular quality sy...	1	0	1.00
+Should QSA decline to exercise its option, or ..._Charges shall be due only for services, materi...	1	0	1.00
+with such fees in accordance with timely provi..._ACT II shall maintain such equipment and machi...	1	0	1.00
+ii._EXCEPT AS SPECIFICALLY SET FORTH IN THIS SECTI...	1	0	1.00
+A Reseach shall not perform any approvements._Any difference of such audit finding of * or g...	1	0	1.00
+Seller shall advise within 2 business days of ..._QUALITY OF PRODUCTS The quality of all Product...	1	0	1.00
+If title to the Equipment and Hot Cell(s) is o..._Such insurance shall (a) insure against Damage...	1	0	1.00
+EXCEPT AS EXPRESSLY INDICATED IN THIS AGREEMEN..._Formally tested for year 2000 Qualification?	1	0	1.00
+A test for potency (21 CFR 610.10) will evalua..._A Task Order Number shall be given to you at t...	1	0	1.00
+The arbitrator(s) shall have the right to asse..._The * , if any, shall be paid each January 1, ...	1	0	1.00
+Page 9 of 42 Within thirty (30) days after SER..._(b) terms of payment for First Gen FDP and Sec...	1	0	1.00
+Price and Payment._3.2 Notwithstanding Section 3.1, APP's obligat...	1	0	1.00
+Topps shall bear the cost of such samples and ..._Topps and Hershey will work together in good f...	1	0	1.00
+Operating Costs shall be determined in accorda..._(b) MOPAC shall use its best efforts to mainta...	1	0	1.00
+Subject to the terms and conditions of this Ag..._A corporation or other entity will be regarded...	1	0	1.00
+JMI shall use reasonable efforts to process an..._In the event the Material is Defective Materia...	1	0	1.00
+Shipment Receipt Acknowledgement Form Appendix..._IN WITNESS WHEREOF, the parties have caused th...	1	0	1.00
+(a) Prior to the Start Date, ECC shall manage ..._Sweetheart's Funding Obligations.................	1	0	1.00
+SO(2)/mmBtu, Buyer shall have the right to rej..._Hereafter referred to as the Wolf Creek Agreem...	1	0	1.00
+WWI shall have complete and sole discretion as..._CoPacker may deliver all the Products that WWI...	1	0	1.00
+Within 15 days after the execution of this Agr..._21.2 Remedies Upon Termination by QSA Pursuant...	1	0	1.00
+2.3._(b) In the event that any recall of Licensed P...	1	0	1.00
+ASE shall nurture a culture which responds to ..._Demonstrated cost reductions resulting from jo...	1	0	1.00
+c. Environmental._15.	1	0	1.00
+2._7UP/RC shall invoice Purchaser for each shipme...	1	0	1.00
+ARTICLE 10 ORDERS AND SHIPMENTS 10.1 Orders an..._QSA shall be responsible for implementing and ...	1	0	1.00
+In all respects, this Agreement shall govern, ..._If in all respects, this Agreement shall gover...	0	1	1.00
+Any material which Synnex deems necessary to p..._A Reseach shall not perform any approvements.	0	1	1.00
+Paragraph 2.3 shall be amended to add that mat..._Paragraph 2.3 may be separated to add that mat...	0	1	1.00
+VA Research will replace the defective compone..._If VA Research will replace the defective comp...	0	1	1.00
+There will not be any credit taken by VA Resea..._There will always be credit to VA Research for...	0	1	1.00
+A * Blanket Purchase Order (&quot;Blanket Purc..._A * General purchase order (& quot; Order of c...	0	1	1.00
+Should Synnex need to purchase material from a..._Synnex does not need to inform VA Research whe...	0	1	1.00
+All modifications to such VA Research software..._No modification of VA Research software will b...	0	1	1.00
+Paragraph 7.2 shall be added: Synnex shall be ..._Paragraph 7.2 should be added: Synnex may be n...	0	1	1.00
+Paragraph 2.3 shall be amended to add that mat..._Paragraph 2.3 may be amended, if Synnex agrees...	0	1	1.00
+(d) Gross rental payments shall include: utili..._(d) Gross rental payments may include, if exce...	0	1	1.00
+This Agreement shall be binding upon and inure..._The present parties and their respective succe...	0	1	1.00
+Provided, Synnex shall hold VA Linux harmless ..._Synnex will not exempt VA Linux nor represent ...	0	1	1.00
+All prices quoted are exclusive of federal, st..._Although all prices quoted are exclusive of fe...	0	1	1.00
+Synnex shall further agree to properly place V..._Synnex also agrees that it may properly affix ...	0	1	1.00
+This notification will be given within one (1)..._This notice may be given within (1) business d...	0	1	1.00
+Synnex shall be solely responsible for custome..._Except for claims arising out of any VA Linux ...	0	1	1.00
+All prices quoted are exclusive of federal, st..._VR Research may be liable for any of these ite...	0	1	1.00
+Quality._Taxes and Royalty.	0	1	1.00
+GAS PURCHASE AGREEMENT THIS AGREEMENT is made ..._Buyer and Seller shall also be hereinafter ref...	0	1	1.00
+Customer will notify USF at least [***] days i..._Customer should notify USF of special promotio...	0	1	1.00
+Notwithstanding anything contained herein or i..._If anything contained in this document and any...	0	1	1.00
+Upon reaching the stated end date of a deviate..._If you do not reach the stated end date of a d...	0	1	1.00
+Interest will be charged at the lower of [***]..._If no interest will be charged at the lower of...	0	1	1.00
+Invoice cost shall not be adjusted for, and Cu..._If the cost of the invoice is adjusted, Custom...	0	1	1.00
+This Agreement shall be governed by and constr..._This Agreement shall not be governed by, const...	0	1	1.00
+In the event this Agreement is terminated for ..._You do not agree to purchase, or cause a third...	0	1	1.00
+It is the policy of USF to comply with all app..._If USF policy does not comply with all state a...	0	1	1.00
+Distributor shall supply Customer with items o..._The Distributor will never provide Customer wi...	0	1	1.00
+Additionally, the website is intended to allow..._In addition, the site may allow users to searc...	0	1	1.00
+If Airline has not remedied the situation to t..._The LMGC shall not be entitled to, or in addit...	0	1	1.00
+Neither party may assign its rights or obligat..._Both parties may assign their rights or obliga...	0	1	1.00
+Airline shall pay LMGC (or LMG Travel) commiss..._The airline will be required to pay LMGC (or L...	0	1	1.00
+(b) Airline agrees to load and maintain the Sp..._The Special Rates in Class **** during the Ini...	0	1	1.00
+As soon as possible, but in any event by July ..._If, as soon as possible, but in any case no la...	0	1	1.00
+The Distributor will never provide Customer wi..._if Customer wishes, it will always be provided...	0	1	1.00
+Selling price will be reestablished by applyin..._If the sale price is restored by applying the ...	0	1	1.00
+Customer shall be primarily responsible for al..._If the Customer wishes it will not be responsi...	0	1	1.00
+Such product must be unopened, full case nonpe..._Such product may be closed, non-perishable pro...	0	1	1.00
+No force majeure event shall excuse Customer f..._Any event of force majeure may release Custome...	0	1	1.00
+In the event this Agreement is assigned, the a..._If this Agreement is attributed, the assignor ...	0	1	1.00
+It is expressly acknowledged and agreed that U..._The cost of freight charged to the Customer ma...	0	1	1.00
+USF may not assign any accounts receivable due..._If USF assigns any accounts, then you can rece...	0	1	1.00
+In addition, the site may allow users to searc..._In addition, if the site can allow users to se...	0	1	1.00
+ASE will place orders for materials using such..._EXPORT CONTROL AND GOVERNMENT APPROVAL The Par...	1	1	1.00
+If any Governmental Authority withdraws its ap..._(a) Medica shall at its cost obtain and mainta...	1	1	1.00
+No tax requirement is expected to dulyfree zon..._7.	1	0	1.00
+Nephros shall deliver all purchase orders by f..._(a) Nephros shall file, prosecute and maintain...	1	0	1.00
+If at any time after delivery of Filled Produc..._(iv) Other than with respect to Required Chang...	1	0	1.00
+(d) As soon as available, KB shall use best ef..._In the event the Bidding Party winning the bid...	1	0	1.00
+Such Minimum Capital Charge shall be included ..._Invoices will be based on the unitized estimat...	1	0	1.00
+Under these circumstances the licensing of any..._1.7 &quot;Effective Date&quot; shall mean the ...	1	0	1.00
+For the purposes of this Supply Agreement, "Ma..._(a) In the event that, at any time during the ...	1	0	1.00
+In the event of any conflict or inconsistency ..._Neither party shall use the name of the other ...	1	0	1.00
+Topps shall either supply, or at its option pa..._A material breach includes, but is not limited...	1	0	1.00
+Supplier will have no obligation to indemnify ..._The foregoing states Supplier's exclusive liab...	1	0	1.00
+SWS may demand that production be switched to ..._Only in the case of mobile shredders shall Ifc...	1	0	1.00
+Information which is initially orally or visua..._1.0 GENERAL 1.1 LIABILITY Except as otherwise ...	1	0	1.00
+"APM" or "Associated Product Materials" shall ..._Solectron will comply with the provisions of E...	1	0	1.00
+In the event that shipments are terminated pur..._Except with respect to remedies as set forth i...	1	0	1.00
+A maximum of 3 days early and 0 days late shal..._The plan must specify the quality metrics to b...	1	0	1.00
+14.11 Amendment._(b) A party receiving Confidential Information...	1	0	1.00
+Ligand shall pay to Cardinal Health the unit p..._1.39 "Unit" means each individually Packaged u...	1	0	1.00
+In such instance, these vendor electronic file..._Customer shall not be primarily responsible fo...	1	0	1.00
+19._Upon request, ASE shall ship all Scrap to Moto...	1	0	1.00
+The remainder of the Agreement shall remain va..._CoPacker shall reimburse WWI in full for the q...	1	0	1.00
+If such a claim is or is likely to be made, Su..._EXHIBIT 10.24 GOODS AGREEMENT 2.0 STATEMENT OF...	1	0	1.00
+TERM AND TERMINATION............................._Requirement must be manually agreed upon betwe...	1	0	1.00
+No amendment to or modification of this Agreme..._Any litigation between the Parties relating to...	1	0	1.00
+10.3 ABI will be responsible for all Recall ac..._8.2 In any Territory where the ABI Parties are...	1	0	1.00
+10.7 Reservation of All Other Rights._The language of the arbitration will be English.	1	0	1.00
+THIS EXHIBIT HAS BEEN REDACTED AND IS THE SUBJ..._ACT II shall provide such commercially reasona...	1	0	1.00
+Any impact on the operation of the process at ..._It is recommended that the Management Team mee...	1	0	1.00
+__X__ Australia/New Zealand Products must be t..._It is expected that Solectron will notify NCR ...	1	0	1.00
+If the fair market value can not be determined..._9.2 ACT II shall indemnify, defend and hold JA...	1	0	1.00
+For this document, the term DR includes [ ]._Furthermore, Solectron warrants that [ ].	1	0	1.00
+(k) Nothing in this Agreement shall preclude H..._(d) Any new technology or other intellectual p...	1	0	1.00
+Before agreeing to supply Chiron with Excess Q..._There are no covenants, promises, agreements, ...	1	0	1.00
+EMC shall [*]from the SUPPLIER [*]on a [*]basis._[*] shall [*]for such [*] as detailed in EMC's...	1	0	1.00
+Preventive maintenance and service contracts f..._At the end of each trains' useful life, Novost...	1	0	1.00
+In the event Buyer terminates without Cause, B..._EXHIBIT 10.24 GOODS AGREEMENT 10.0 LIMITATION ...	1	0	1.00
+[ ] 2.0 PREFERRED SUPPLIER Solectron will [ ] ..._Solectron will meet the following shipping req...	1	0	1.00
+Samples are to be stored in a controlled (ware..._If more than 28 days have passed since the del...	1	0	1.00
+Any controversy or claim arising out of or rel..._Nothing in this agreement creates, or will be ...	1	0	1.00
+Upon the occurrence of an Event of Force Majeu..._This Section 12.3 does not apply to any liabil...	1	0	1.00
+(vii) QSA and Novoste agree that all potential..._24 ARTICLE 21 TERMINATION 21.1 Termination for...	1	0	1.00
+Each of DSM and Cubist represents and warrants..._DAPTOMYCIN, DAPTOMYCIN PRODUCT OR PRODUCT mean...	1	0	1.00
+3._(b) InLine Products Sold after 2000.	1	0	1.00
+In such event, Seller shall reimburse Buyer fo..._The new rates shall be determined by multiplyi...	1	0	1.00
+(c) A termination or expiration of this Agreem..._E. Ingredient changes.	1	0	1.00
+Subject to paragraph (c) below, Cubist will us..._The Carrier shall provide a written receipt ev...	1	0	1.00
+In the case of a registration under Section 2...._In addition to and not in limitation of the fo...	1	0	1.00
+Purchaser shall purchase Products from 7UP/RC ..._Such testing shall be conducted according to 7...	1	0	1.00
+12.18._(d) The location of the meetings of the Repres...	1	0	1.00
+7.3 JMI will not provide Celgene with the resu..._Neither party shall be liable to the other for...	1	0	1.00
+This RMA number must be referenced on all pape..._Any remedies at law or equity not specifically...	1	0	1.00
+Once signed, NOVOSTE shall not supervise the a..._All Seedtrain revenues resulting from deliveri...	1	0	1.00
+._In the event that EntreMed uses an ".	1	0	1.00
+14.6 EXCHANGE OF INFORMATION: Unless required ..._Buyer may  use commercially reasonable efforts...	1	0	1.00
+19.11 ENTIRE AGREEMENT._ARTICLE 2 TERM OF AGREEMENT The term of this A...	1	0	1.00
+4.2._Either party may terminate this Agreement imme...	1	0	1.00
+They should be shipped at the time of the orde..._In the event that this Quotation includes an a...	1	0	1.00
+Motorola shall pay for all reasonable shipping..._Confidential treatment has been requested with...	1	0	1.00
+PREREQUISITES 2.1 We each must, at our respect..._Obligations Upon Termination.	1	0	1.00
+CBSH shall provide SERAGEN copies of all MRR D..._Batch acceptance by SERAGEN will be based sole...	1	0	1.00
+2nd Campaign On "._."	1	0	1.00
+CoPacker may use any of such trademarks or tra..._14.	1	0	1.00
+If any provision of this agreement is held une..._If more than 28 days have passed since the del...	1	0	1.00
+been taken by the ACT II under the direction o..._10.2 This Agreement may be terminated: 10.2.1 ...	1	0	1.00
+Notwithstanding the foregoing, Cinram may use ..._Each party will use at least the same standard...	1	0	1.00
+210 and 21 C.F.R._12.3 No Liability for Consequential Damages.	1	0	1.00
+Exclusivity During the term hereunder, SWS sha..._In an instance in which third parties shall ma...	1	0	1.00
+(c) Topps acknowledges that Hershey incurred s..._Such decision shall not be arbitrary, capricio...	1	0	1.00
+All Contract Products shall be traceable throu..._Capitalized terms not defined herein shall hav...	1	0	1.00
+Solectron will retain Continuation Engineering..._5.9 Duty Drawback.	1	0	1.00
+25.0 PREVIOUS AGREEMENTS 25.1 The contract sig..._Product, shipping of Novoste B.V.	1	0	1.00
+Terms of payment shall be 1% fifteen (15) days..._This Agreement shall be binding and inure to t...	1	0	1.00
+The closing of a purchase and sale of Offered ..._The agreements in this Article III shall remai...	1	0	1.00
+Samples are to be stored in a controlled (ware..._Unless the parties agree otherwise the number ...	1	0	1.00
+1.15 "Dispute" shall have the meaning set fort..._18.4 NO WAIVER.	1	0	1.00
+The provisions of Section 3 (Percentage Volume..._(e) Property Insurance covering (i) any Apple ...	1	0	1.00
+Notwithstanding the foregoing provisions of th..._It has not entered into any agreement with any...	1	0	1.00
+Cubist may notify Chiron in writing of any cha..._Its performance and execution of this Supply A...	1	0	1.00
+* Certain information on this page has been om..._9.2 INTELLECTUAL PROPERTY INDEMNIFICATION: Sup...	1	0	1.00
+Notwithstanding the above, it is agreed that i..._ARTICLE 7: CONFIDENTIALITY The parties refer t...	1	0	1.00
+Costs Requiring Prior Approval: Costs requirin..._The annual report shall summarize progress for...	1	0	1.00
+All round trip travel must be completed not la..._1.5 OTHER REQUIREMENTS.	1	0	1.00
+35 Additional components that may be required ..._In the event that any portion of the Novoste T...	1	0	1.00
+The Security Council shall consist of fifteen ..._The Security Council shall, where appropriate,...	1	0	1.00
+All documents and financial reports shall be p..._Sweetheart shall dismantle, load and otherwise...	1	0	1.00
+USF retains sole responsibility for all in bou..._Therefore, Rubio's units that are currently no...	1	0	1.00
+The provisions and remedies in this Agreement ..._Each Representative or alternate Representativ...	1	0	1.00
+Solectron will provide Product support in acco..._4.9 Supply Line Management.	1	0	1.00
+Under this agreement, NCR will purchase person..._If an actual or threatened claim of infringeme...	1	0	1.00
+22._22.1 The warranties, representations, guarante...	1	0	1.00
+Hershey's production facility, exclusive of al..._(b) Hershey shall, at its sole cost, secure an...	1	0	1.00
+14 14 21.0 NO IMPLIED LICENSE 21.1 The parties..._13.0 DEFAULT 13.1 No failure or omission by ei...	1	0	0.99
+Reasonable costs related to such preparation a..._For such time as QSA is affected by an event o...	1	0	0.99
+ARTICLE 7._A copy of this Exhibit with this recital intac...	1	0	0.98
+3 5.3 GOVERNMENT APPROVALS: Foamtec shall, at ..._HEADINGS.	1	0	0.98
+(c) [ ]* (d) Subject to the terms and conditio..._Certificates of such insurance shall be provid...	1	0	0.99
+8.2 In the event of the enactment of any feder..._The said coal shall not be larger than 2 inche...	1	0	0.99
+In the event that Biopure shall issue a stock ..._Anything contained in this Section 4 to the co...	1	0	0.99
+Genesee and Boston Brewing will use their best..._Genesee shall: (i) review the specifications a...	1	0	0.99
+Nor shall a waiver by one party of a breach of..._In the event Topps elects to utilize Hershey's...	1	0	0.99
+On delivery by Medica of a shipment of Cartrid..._Article 6 QUALITY SYSTEM 6.1 General Quality S...	1	0	0.99
+.," such as "._Chiron shall have no liability to Customer for...	1	0	0.98
+Customer will be responsible for restocking ch..._USF agrees regular deliveries will not be made...	1	0	0.99
+Novoste B.V. 16 16 reserves the right to assig..._1.3 AorTech shall at its own cost, provide to ...	1	0	0.99
+Commencing on the date of this Agreement and a..._This rate shall be adjusted annually commencin...	1	0	0.99
+CHIRON: A) Prior to bench scale runs: "._If any Materials, intermediate product, Bulk P...	1	0	0.99
+Buyer assumes no liability or responsibility f..._14.4 COMMUNICATIONS: All communications betwee...	1	0	0.99
+7UP/RC shall not perform routine maintenance o..._All other raw materials shall be supplied by P...	1	0	0.99
+If such independent laboratory determines that..._Chiron and Cubist are each sometimes referred ...	1	0	0.99
+Motorola's stringent quality standards._In the event of a cure of default, the cure sh...	1	0	0.99
+If the parties disagree, samples of both the F..._(iv) Other than with respect to Required Chang...	1	0	0.99
+(b) If any Event of Force Majeure prevents Med..._Medica represents to Nephros as follows: (a) M...	1	0	0.99
+ACTII shall be responsible for the design, con..._ACTII shall be responsible for the design, con...	1	0	0.99
+7.3 Extent of Warranty._wash down motors, interconnecting piping, cont...	1	0	0.98
+(B) Using the * Forecasts, ASE will provide su..._The Auditor shall only have access to informat...	1	0	0.99
+7.3.)_The weekly delivery deadlines agreed on in the...	1	0	0.98
+XI INDEMNIFICATION 11.1 By Purchaser._In addition to all other relief, the arbitrato...	1	0	0.98
+The parties to this Agreement shall at all tim..._This Agreement may be terminated only in accor...	1	0	0.99
+10.7 Reservation of All Other Rights._The language of the arbitration will be English.	1	0	0.99
+Change Order Template 19 4._COMPENSATION: Project Establishment Fee: There...	1	0	0.98
+1.2 SEVERABILITY If any provision of this Agre..._Prior to return of any warranty materials Buye...	1	0	0.99
+WWI shall pay to CoPacker in full and complete..._CoPacker shall invoice WWI for the Products on...	1	0	0.99
+The Indemnifying Party will be liable for the ..._(c) The provisions of this Section 10.2 will s...	1	0	0.99
+Attempt to reproduce and scale up a fermentati..._TERMINATION BY SPONSOR a) Sponsor may at any t...	1	0	0.99
+3.3 TERMINATION OF A SOW OR WA: Buyer may term..._EXHIBIT 10.24 GOODS AGREEMENT party can be ide...	1	0	0.99
+The recovery plan actually implemented by Appl..._(a) description of the Products to be purchase...	1	0	0.99
+17 EXECUTION COPY (a) All risk of loss for eac..._"CASUALTY LOSS," as used with respect to the F...	1	0	0.99
+The inspection may include all aspects of CoPa..._The terms and conditions of the WWI purchase o...	1	0	0.99
+23.3 AorTech warrants its right under this Agr..._6.2 AorTech shall, in good faith, maintain wri...	1	0	0.99
+Costs and Expenses of Delivery: All shipping a..._(c) Bulk Chemical and Formulation Manufacturin...	1	0	0.99
+ARTICLE 28 INSURANCE 28.1 Novoste Insurance Du..._The Source Train will be contained within the ...	1	0	0.99
+Average Gross Properties, Plant and Equipment ..._Safety Data Stepwise breakdown of tests on rea...	1	0	0.99
+1.2 "Software Development Product" shall mean ..._99 indicates last record X 5. .	1	0	0.99
+Nephros and Medica wish for Medica to manufact..._If any provision of this agreement is held to ...	1	0	0.99
+Anyone of the following events shall constitut..._16.	1	0	0.98
+Except to the extent otherwise provided under ..._4 6.2 Celgene shall provide a firm written ord...	1	0	0.99
+2 (c) Nephros shall deliver each purchase orde..._A monthly trending report shall be issued to N...	1	0	1.00
+CBSI will appoint a CBSI representative (the &..._The cost of any arbitration proceeding shall b...	1	0	1.00
+Contractor shall not unreasonably withhold wri..._19 MISCELLANEOUS Contractor shall not assign, ...	1	0	1.00
+11 8.2 INVENTORY SHIPMENTS._Fees of attorneys and other professionals and ...	1	0	1.00
+& Coal Supply Agreement dated January 1, 1985 ..._4.	1	0	1.00
+Cubist will direct each Cubist Supplier to per..._Chiron will use test methods and processes agr...	1	0	1.00
+Transmission of a Signature with a Document ef..._Issues of arbitrability will be determined in ...	1	0	1.00
+Star will provide weekly orders, for its weekl..._5.01 Identification of the goods to the contra...	1	0	1.00
+No force majeure event shall excuse Customer f..._Customer may be responsible for restocking cha...	1	0	1.00
+2._In the event Hershey does not accept the Purch...	1	0	1.00
+It is the expectation of both Parties that IDT..._SECTION 10 No Waiver; Cumulative Remedies.	1	0	1.00
+up to two years 100% from two to three years 7..._Cession of contractual rights Without prior wr...	1	0	1.00
+Each Special Ticket, which will not include en..._Airline acknowledges that LMGC intends to issu...	1	0	1.00
+Medica, on the one hand, and Nephros, on the o..._ges specified in that purchase Medica must sto...	1	0	1.00
+The Indemnifying Party shall have no obligatio..._EXCEPT AS OTHERWISE PROVIDED IN SECTION 7 (WIT...	1	0	1.00
+Contract funds may not be used for (1) the cre..._Upon request, the Contracting Officer will mak...	1	0	1.00
+This Agreement may be executed in any number o..._2.2.4 Notwithstanding the foregoing, if the Co...	1	0	1.00
+(vii) Notwithstanding paragraph (a) of this Se..._KBI Shares Option Agreement: The KBI Shares Op...	1	0	1.00
+ARTICLE G.6._The items specified below as described in SECT...	1	0	1.00
+15.3 QTEL's obligation to hold Buyers Subject ..._17.6 QTEL shall construct, subcontract to have...	1	0	1.00
+14._RISK OF LOSS Boston Brewing shall have sole re...	1	0	1.00
+NOTICES All notices required herein shall be g..._AMENDMENTS No amendment, change or modificatio...	1	0	1.00
+._Changes to the documents within 10 days before...	1	0	1.00
+Suppliers of all other raw materials and ingre..._Any such inspection or testing by WWI shall be...	1	0	1.00
+Pricing and Payment._Miscellaneous Provisions 10.01 B&amp;W represe...	1	0	1.00
+"LICENSE AGREEMENT" shall have the meaning set..._(b) Failure by a Nondefaulting Party to give a...	1	0	1.00
+7UP/RC warrants that all Product delivered to ..._7UP/RC shall not perform routine maintenance o...	1	0	1.00
+C. The parties agree that the following will b..._Topps agrees to pay fifty percent (50%) of tho...	1	0	1.00
+Pricing will be guaranteed for [***]._In the rare circumstance where Customer and US...	1	0	1.00
+Reference is made to the Agreement Regarding N..._The parties shall agree as to any alterations,...	1	0	1.00
+NONWARRANTY SERVICE AGREEMENT: Service calls t..._CQ#95739ASAP Page 4 of 9 FINISH The Equipment ...	1	0	1.00
+* CONFIDENTIAL TREATMENT REQUESTED: MATERIAL H..._If a regulatory agency or law or regulation of...	1	0	1.00
+While manufacturing, bottling, canning, labeli..._2.5 Title and Risk of Loss.	1	0	1.00
+In cases where KB or an Affiliate of TR is cho..._(d) As soon as available, and in any event not...	1	0	1.00
+._QA/QC Responsibilities 10 5.	1	0	1.00
+* CONFIDENTIAL TREATMENT REQUESTED: MATERIAL H..._(b) In the event that any recall of Licensed P...	1	0	1.00
+15.7 Notice of Non Compliance._Apple will pay only those tooling costs and NR...	1	0	1.00
+(b) Pledgor shall execute and deliver to Secur..._IDT will complete the software package for Seq...	1	0	1.00
+The Specifications shall not be amended by the..._[ ] 7.0 FORMAL REVIEWS AND AUDITS NCR at it's ...	1	0	1.00
+All the terms and conditions of these Agreemen..._In any case of consignment pursuant to this Pa...	1	0	1.00
+The section headings contained in this Agreeme..._13.1 Each Party recognizes that the other Part...	1	0	1.00
+ARTICLE 8._Jiri Kaluzik Title VP Supply Chain Mgmt Title ...	1	0	1.00
+People shall eat whatever they want._People shall eat whatever they want.	1	0	1.00
+13.3 Waiver._7.3 Extent of Warranty.	1	0	1.00
+Neither party may assign or otherwise transfer..._PATHEON REIMBURSEMENT No later than the *** fo...	1	0	1.00

@@ -8,13 +8,14 @@ from preprocess_norms import turn_pair_matrix
 
 # Constants.
 MAXLENGTH = 200
-NB_CLASSES = 5 
+NB_CLASSES = 5
 NB_EPOCH = 100000
 N_FOLDS = 10
 BASE_MODEL_PATH = 'cnn_models/cnn_model_'
 K_FOLD = '_k_fold'
-BINARY = '_binary'
-
+BINARY = ''#_binary'
+if BINARY:
+    NB_CLASSES = 2
 
 def train_cnn(fold, X_train, X_val, y_train, y_val):
     """
@@ -23,7 +24,7 @@ def train_cnn(fold, X_train, X_val, y_train, y_val):
     # Get the CNN model.
     model = get_model(MAXLENGTH, nb_classes=NB_CLASSES)
 
-    save_weights_path = BASE_MODEL_PATH + str(fold)
+    save_weights_path = BASE_MODEL_PATH + str(fold) + '%s%s.hdf5' % (K_FOLD, BINARY)
 
     checkpointer = ModelCheckpoint(filepath=save_weights_path,
                                  verbose=1,
@@ -40,10 +41,11 @@ def train_cnn(fold, X_train, X_val, y_train, y_val):
 
     val_accs = acc_loss_monitor.history['val_acc']
     val_loss = acc_loss_monitor.history['val_loss']
-     
-    last_acc = val_accs[-1]
-    last_loss = val_loss[-1]  
-    
+
+    last_acc = val_accs[val_loss.index(min(val_loss))]
+    last_loss = min(val_loss)
+
+ 
     print "Model from fold %s obtained accuracy of %.2f and loss of %.2f" % (fold, last_acc, last_loss)
 
     model.load_weights(save_weights_path)
@@ -66,22 +68,26 @@ def run_test(fold, X_test, y_test):
     # Get model.
     model = get_model(MAXLENGTH, nb_classes=NB_CLASSES)
     # Load weights.
-    model.load_weights(BASE_MODEL_PATH + str(fold))
+    model.load_weights(BASE_MODEL_PATH + str(fold) + '%s%s.hdf5' % (K_FOLD, BINARY))
 
     y_test = np_utils.to_categorical(y_test, NB_CLASSES)
 
     # Set the output file.
-    output = open('cnn_test_result%s%s.txt' % (K_FOLD, BINARY), 'w')
+    if K_FOLD:
+        output = open('cnn_test_result%s%s.txt' % (K_FOLD, BINARY), 'a')
+    else:
+        output = open('cnn_test_result%s%s.txt' % (K_FOLD, BINARY), 'w')
 
     # Run over test set.
     for i in range(len(X_test)):
         matrix = turn_pair_matrix(X_test[i], MAXLENGTH)
 
-        pred = model.predict(matrix)
-        pred = np.argmax(pred)
+        pred_vec = model.predict(matrix)
+        print pred_vec
+        pred = np.argmax(pred_vec)
         gold = np.argmax(y_test[i])
-        confidence = np.max(pred)
-        output.write("Norm\t%d\t%d\n%.2f" % (gold, pred,confidence))
+        confidence = np.max(pred_vec)
+        output.write("%s_%s\t%d\t%d\t%.2f\n" % (X_test[i][0], X_test[i][1], gold, pred,confidence))
     
     print "Finished test."
 
@@ -129,12 +135,12 @@ def run_folds():
             run_test(key, X_val, y_val)
         else:
             # Remove the model.
-            os.remove(BASE_MODEL_PATH + str(key))
+            os.remove(BASE_MODEL_PATH + str(key) + '%s%s.hdf5' % (K_FOLD, BINARY))
 
     mean_acc = mean_acc/N_FOLDS
     mean_loss = mean_loss/N_FOLDS
 
-    write_results(best_fold, high_acc, min_loss, mean_acc, mean_loss, k_fold=k_fold)
+    write_results(best_fold, high_acc, min_loss, mean_acc, mean_loss)
 
     if not K_FOLD:
         run_test(best_fold, X_test, y_test)

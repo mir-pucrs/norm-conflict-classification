@@ -1,0 +1,46 @@
+Customer shall be primarily responsible for al..._If the Customer wishes it will not be responsi...	1	0	0.87
+Furthermore, Buyer shall provide PBF annual au..._Buyer will provide PBF audited financial state...	1	0	0.87
+ARTICLE H.2._Notwithstanding the above, the total of all in...	0	0	0.68
+Celgene shall have the right to defend and/or ..._Celgene shall not have the right to defend and...	1	1	1.00
+Copacker shall be the exclusive supplier of th..._Copacker may be the exclusive supplier of the ...	1	1	0.99
+Quality._Taxes and Royalty.	1	0	0.61
+(C) Following a Change of Control, the success..._7.1 With the issuance by ABI Parties of a Purc...	0	0	0.87
+If requested by Purchaser, 7UP/RC shall provid..._If requested by Purchaser, 7UP/RC shall not Pu...	1	1	1.00
+5.2 The Company represents and warrants that t..._6.2 If Ingredients of unacceptable quality, ba...	0	0	0.90
+Invoice cost shall not be adjusted for, and Cu..._If the cost of the invoice is adjusted, Custom...	1	0	0.59
+12.7 Upon termination by APP under Section 12...._APP will reasonably cooperate with ABI in conn...	0	0	0.93
+If the Notified Party fails to cure such breac..._Cubist may  bear all costs and expenses of dev...	0	0	0.76
+10.4 The term confidential information shall n..._Overtime shall be defined as the number of hou...	0	0	0.90
+In the event of any permitted assignment, such..._KBI shall submit a Firm Order confirming such ...	0	0	0.60
+AorTech may return materials to suppliers for ..._These records, as they apply to Novoste B.V.	0	1	0.57
+Notwithstanding the above, the total of all in..._If needed, the amount spent in all invoices ma...	1	0	0.91
+This Agreement shall be governed by and constr..._This Agreement shall not be governed by, const...	1	1	0.99
+DEFINITIONS 7.1 "Affiliate" shall mean any cor..._4.5 Feature Management [ ] 4.6 Technical Docum...	0	0	0.89
+ges specified in that purchase Medica must sto..._Nephros may order for delivery in any given Qu...	1	0	0.92
+Supplier will provide [*] updates via the [*] ..._15.0 B.	0	0	0.72
+At TR's request and expense, KB shall use its ..._Each Producer who is responsible for one or mo...	0	0	0.85
+"APM" or "Associated Product Materials" shall ..._Solectron will comply with the provisions of E...	0	0	0.92
+ACTII shall be responsible for the design, con..._Except for the Janssen Equipment, ACTII must b...	1	0	0.92
+The obligations of each receiving party hereun..._For each Product or revision thereof, written ...	0	0	0.93
+SAFETY; ADVERSE EVENT REPORTING._Chiron shall pay all governmental charges, imp...	0	0	0.62
+(b) Termination of this Agreement shall not af..._During the period prior to the date of the com...	0	0	0.86
+MS as Third Party Beneficiary._NCR will provide Solectron with detailed shipp...	0	0	0.73
+9.4 Definition of Recall._i) Medica shall copy Nephros Quality Assurance...	0	0	0.80
+XIII GENERAL PROVISIONS 13.1 Notices._7UP/RC agrees not to use the Equipment for the...	0	0	0.63
+7.3 JMI will provide Celgene with the results ..._7.3 JMI will not provide Celgene with the resu...	1	1	0.99
+17.3 Any Consigned Tooling delivered to QTEL s..._Consigned Tools delivered to QTEL may be used ...	1	0	0.93
+The terms of this Letter Agreement shall becom..._The terms of this Letter Agreement must not be...	1	1	0.99
+USF agrees regular deliveries will not be made..._USF agrees regular deliveries may be made betw...	1	1	0.99
+This Agreement shall not be altered or changed..._CoPacker may furnish to WWI insufficient infor...	0	0	0.82
+The Specifications may only be amended by the ..._The Specifications shall not be amended by the...	1	1	0.99
+3.7 CONTRACT CANCELLATION CHARGES For the conv..._In any possible case shall Buyer cancel the re...	1	0	0.69
+7.5 PAYMENT TERMS._(b) Upon termination of this Agreement by MP3....	0	0	0.77
+A 3% annual allowance for salary increases wil..._Salary shall not be increased by more than 2% ...	1	0	0.80
+Customer shall have [***] days to increase mov..._The incentive will be paid by check.	0	0	0.60
+In addition, CBSH may disclose the identity of..._CBSH must not disclose the identify of SERAGEN...	1	0	0.86
+Surcharge: BEBIG will make a substantial inves..._BEBIG shall not make a investments in any seed...	1	0	0.64
+Notwithstanding anything to the contrary conta..._Notwithstanding anything to the contrary conta...	0	1	1.00
+If a Product Liability Claim is brought agains..._To be deemed an approved assignment under this...	0	0	0.82
+In addition, Cubist will be consulted concerni..._In addition, Cubist may not be consulted conce...	1	1	0.99
+Synnex shall be solely responsible for custome..._Except for claims arising out of any VA Linux ...	1	0	0.92
+Purchaser shall not assume title and risk of l..._The parties hereto acknowledge that this docum...	0	0	0.75

@@ -11,7 +11,7 @@ ID_CONF = '2'
 ID_N_CONF = '1'
 CONF_CLASS = 1
 N_CONF_CLASS = 0
-BINARY = True
+BINARY = False #True
 
 
 class Folds():

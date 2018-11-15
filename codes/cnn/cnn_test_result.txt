@@ -1,46 +1,46 @@
-Norm	4	0
-Norm	3	0
-Norm	0	0
-Norm	1	0
-Norm	1	0
-Norm	1	0
-Norm	0	0
-Norm	1	0
-Norm	0	0
-Norm	4	0
-Norm	0	0
-Norm	0	0
-Norm	0	0
-Norm	0	0
-Norm	0	0
-Norm	4	0
-Norm	4	0
-Norm	0	0
-Norm	1	0
-Norm	0	0
-Norm	0	0
-Norm	0	0
-Norm	4	0
-Norm	0	0
-Norm	0	0
-Norm	0	0
-Norm	0	0
-Norm	0	0
-Norm	0	0
-Norm	1	0
-Norm	2	0
-Norm	1	0
-Norm	1	0
-Norm	0	0
-Norm	1	0
-Norm	2	0
-Norm	0	0
-Norm	2	0
-Norm	0	0
-Norm	2	0
-Norm	2	0
-Norm	0	0
-Norm	0	0
-Norm	1	0
-Norm	2	0
-Norm	0	0
+Customer shall be primarily responsible for al..._If the Customer wishes it will not be responsi...	4	0	0.55
+Furthermore, Buyer shall provide PBF annual au..._Buyer will provide PBF audited financial state...	3	0	0.54
+Neither party may assign this Agreement, in wh..._not due to the failure of a supplier to timely...	0	0	0.56
+Celgene shall have the right to defend and/or ..._Celgene shall not have the right to defend and...	1	0	0.55
+Copacker shall be the exclusive supplier of th..._Copacker may be the exclusive supplier of the ...	1	0	0.53
+Quality._Taxes and Royalty.	1	0	0.35
+With a segment of Kraton film in position, the..._Processinduced failure incidents are defined a...	0	0	0.55
+If requested by Purchaser, 7UP/RC shall provid..._If requested by Purchaser, 7UP/RC shall not Pu...	1	0	0.51
+The catheter design consists of a rapidexchang..._QSA shall be entitled to subcontract to third ...	0	0	0.56
+Invoice cost shall not be adjusted for, and Cu..._If the cost of the invoice is adjusted, Custom...	4	0	0.55
+Celgene has paid to JMI, upon the delivery by ..._JMI is required to obtain a quota from the DEA...	0	0	0.56
+INTENTIONALLY OMITTED._All purchases of the Products by WWI under thi...	0	0	0.37
+Boston Brewing shall have the right, at any ti..._All yeast supplied by Boston Brewing shall rem...	0	0	0.55
+"cGMPs" means current Good Manufacturing Pract..._Nephros may not further postpone delivery of a...	0	0	0.53
+If ECC does not timely elect to purchase the E..._Any funds expended by Sweetheart pursuant to t...	0	0	0.55
+Notwithstanding the above, the total of all in..._If needed, the amount spent in all invoices ma...	4	0	0.57
+This Agreement shall be governed by and constr..._This Agreement shall not be governed by, const...	4	0	0.52
+Except under extraordinary circumstances, each..._Neither Party will represent anything to the c...	0	0	0.55
+ges specified in that purchase Medica must sto..._Nephros may order for delivery in any given Qu...	1	0	0.55
+Each of Motorola and ASE is a "Party"._Each Party, at its own expense, shall cooperat...	0	0	0.51
+USF will maintain an appropriate inventory of ..._Such product must be unopened, full case nonpe...	0	0	0.54
+Topps shall have the sole and absolute discret..._B.	0	0	0.34
+ACTII shall be responsible for the design, con..._Except for the Janssen Equipment, ACTII must b...	4	0	0.55
+11.6 Each Party will be solely responsible for..._Despite the foregoing, in no event will ABI be...	0	0	0.56
+ECC hereby acknowledges that any manufacturer'..._If ECC does not timely elect to purchase the E...	0	0	0.54
+This Agreement shall commence on the Effective..._Cardinal Health shall maintain true and accura...	0	0	0.53
+In the event Novoste terminates this Agreement..._If QSA is unable to obtain such license from t...	0	0	0.55
+(f) REGULATORY FILINGS._Cubist may bear all costs and expenses of deve...	0	0	0.39
+2.17 "GAAP" means generally accepted accountin..._(C) If any Force Majeure circumstance cannot b...	0	0	0.54
+7.3 JMI will provide Celgene with the results ..._7.3 JMI will not provide Celgene with the resu...	1	0	0.54
+17.3 Any Consigned Tooling delivered to QTEL s..._Consigned Tools delivered to QTEL may be used ...	2	0	0.56
+The terms of this Letter Agreement shall becom..._The terms of this Letter Agreement must not be...	1	0	0.56
+USF agrees regular deliveries will not be made..._USF agrees regular deliveries may be made betw...	1	0	0.55
+WWI shall place purchase orders with CoPacker,..._CoPacker may not restrict access by WWI's repr...	0	0	0.55
+The Specifications may only be amended by the ..._The Specifications shall not be amended by the...	1	0	0.53
+3.7 CONTRACT CANCELLATION CHARGES For the conv..._In any possible case shall Buyer cancel the re...	2	0	0.48
+|X| C. THIS SUPPLEMENTAL AGREEMENT IS ENTERED ..._N01AI95373 Task Order #01 TASK #01 REPORTING R...	0	0	0.52
+A 3% annual allowance for salary increases wil..._Salary shall not be increased by more than 2% ...	2	0	0.57
+This obligation shall not apply to: (a) inform..._This Agreement shall be binding upon and inure...	0	0	0.53
+In addition, CBSH may disclose the identity of..._CBSH must not disclose the identify of SERAGEN...	2	0	0.53
+Surcharge: BEBIG will make a substantial inves..._BEBIG shall not make a investments in any seed...	2	0	0.54
+The parties will not publicize the terms or co..._Buyer shall not EXHIBIT 10.24 GOODS AGREEMENT ...	0	0	0.52
+Seller shall use reasonable means to limit the..._7.	0	0	0.34
+In addition, Cubist will be consulted concerni..._In addition, Cubist may not be consulted conce...	1	0	0.54
+Synnex shall be solely responsible for custome..._Except for claims arising out of any VA Linux ...	2	0	0.56
+Any loss, cost, expense, liability, damage, de..._The Lands committed to this Agreement shall in...	0	0	0.55

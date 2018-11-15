@@ -12,8 +12,8 @@ from sklearn.model_selection import KFold
 from sklearn.model_selection import train_test_split
 
 # Constants.
-CONF_PATH = '../../data/db_conflicts.csv'
-N_CONF_PATH = '../../data/db_non_conflicts.csv'
+CONF_PATH = '/usr/share/datasets/conflicts/db_conflicts.csv'
+N_CONF_PATH = '/usr/share/datasets/conflicts/db_non_conflicts.csv'
 CONF_FILE = '2'
 N_CONF_FILE = '1'
 CONF_CLASS = 1
@@ -21,8 +21,8 @@ N_CONF_CLASS = 0
 RAND_STATE = 22
 N_SPLITS = 10
 TEST_SIZE = 0.1
-FILE_PATH = '../../data/K-fold_binary.json'
-K_FOLD = True
+FILE_PATH = '../../data/10-fold_binary.json'
+K_FOLD = False
 BINARY = True
 
 
