@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 # Constants.
-FOLDS_PATH = '../../data/10-fold.json'
+FOLDS_PATH = '../../data/K-fold.json'
 DATA_PATH = {'2': '/usr/share/datasets/conflicts/db_conflicts.csv',
              '1': '/usr/share/datasets/conflicts/db_non_conflicts.csv'}
 ID_CONF = '2'

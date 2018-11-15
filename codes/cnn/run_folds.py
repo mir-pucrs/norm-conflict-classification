@@ -50,10 +50,14 @@ def train_cnn(fold, X_train, X_val, y_train, y_val):
     return last_acc, last_loss, save_weights_path
 
 
-def write_results(best_fold, high_acc, min_loss, mean_acc, mean_loss):
+def write_results(best_fold, high_acc, min_loss, mean_acc, mean_loss, k_fold=False):
 	
 	# Set the file.
-	with open('results.txt', 'w') as outfile:
+        if k_fold:
+            f_name = 'results_k_fold.txt'
+        else:
+            f_name = 'results.txt'
+	with open(f_name, 'w') as outfile:
 		message = """CNN Classification\n\nBest fold: %s\nMean Acc: %.2f\nMean Loss: %.2f\nHigh Acc: %.2f\nMin Loss: %.2f\n""" % (best_fold, mean_acc, mean_loss, high_acc, min_loss)
 		outfile.write(message)
         print "Just wrote the results file."
@@ -69,10 +73,10 @@ def run_test(fold, X_test, y_test, k_fold=False):
 	y_test = np_utils.to_categorical(y_test, NB_CLASSES)
 
 	# Set the output file.
-    if k_fold:
-        output = open('cnn_test_result_k_fold.txt', 'a')
-	else:
-        output = open('cnn_test_result.txt', 'w')
+        if k_fold:
+            output = open('cnn_test_result_k_fold.txt', 'a')
+        else:
+            output = open('cnn_test_result.txt', 'w')
 
 	# Run over test set.
 	for i in range(len(X_test)):
@@ -134,7 +138,7 @@ def run_folds(k_fold=False):
     mean_acc = mean_acc/N_FOLDS
     mean_loss = mean_loss/N_FOLDS
 
-    write_results(best_fold, high_acc, min_loss, mean_acc, mean_loss)
+    write_results(best_fold, high_acc, min_loss, mean_acc, mean_loss, k_fold=k_fold)
 
     if not k_fold:
         run_test(best_fold, X_test, y_test)
