@@ -12,7 +12,8 @@ NB_CLASSES = 5
 NB_EPOCH = 100000
 N_FOLDS = 10
 BASE_MODEL_PATH = 'cnn_models/cnn_model_'
-K_FOLD = True
+K_FOLD = '_k_fold'
+BINARY = '_binary'
 
 
 def train_cnn(fold, X_train, X_val, y_train, y_val):
@@ -39,7 +40,7 @@ def train_cnn(fold, X_train, X_val, y_train, y_val):
 
     val_accs = acc_loss_monitor.history['val_acc']
     val_loss = acc_loss_monitor.history['val_loss']
- 	
+     
     last_acc = val_accs[-1]
     last_loss = val_loss[-1]  
     
@@ -50,53 +51,48 @@ def train_cnn(fold, X_train, X_val, y_train, y_val):
     return last_acc, last_loss, save_weights_path
 
 
-def write_results(best_fold, high_acc, min_loss, mean_acc, mean_loss, k_fold=False):
-	
-	# Set the file.
-        if k_fold:
-            f_name = 'results_k_fold.txt'
-        else:
-            f_name = 'results.txt'
-	with open(f_name, 'w') as outfile:
-		message = """CNN Classification\n\nBest fold: %s\nMean Acc: %.2f\nMean Loss: %.2f\nHigh Acc: %.2f\nMin Loss: %.2f\n""" % (best_fold, mean_acc, mean_loss, high_acc, min_loss)
-		outfile.write(message)
+def write_results(best_fold, high_acc, min_loss, mean_acc, mean_loss):
+    
+    # Save to file.
+    with open('results%s%s.txt' % (K_FOLD, BINARY), 'w') as outfile:
+        message = """CNN Classification\n\nBest fold: %s\nMean Acc: %.2f\nMean Loss: %.2f\nHigh Acc: %.2f\nMin Loss: %.2f\n""" % (best_fold, mean_acc, mean_loss, high_acc, min_loss)
+        outfile.write(message)
+
         print "Just wrote the results file."
 
 
-def run_test(fold, X_test, y_test, k_fold=False):
-	
-	# Get model.
-	model = get_model(MAXLENGTH, nb_classes=NB_CLASSES)
-	# Load weights.
-	model.load_weights(BASE_MODEL_PATH + str(fold))
+def run_test(fold, X_test, y_test):
+    
+    # Get model.
+    model = get_model(MAXLENGTH, nb_classes=NB_CLASSES)
+    # Load weights.
+    model.load_weights(BASE_MODEL_PATH + str(fold))
 
-	y_test = np_utils.to_categorical(y_test, NB_CLASSES)
+    y_test = np_utils.to_categorical(y_test, NB_CLASSES)
 
-	# Set the output file.
-        if k_fold:
-            output = open('cnn_test_result_k_fold.txt', 'a')
-        else:
-            output = open('cnn_test_result.txt', 'w')
+    # Set the output file.
+    output = open('cnn_test_result%s%s.txt' % (K_FOLD, BINARY), 'w')
 
-	# Run over test set.
-	for i in range(len(X_test)):
-            matrix = turn_pair_matrix(X_test[i], MAXLENGTH)
+    # Run over test set.
+    for i in range(len(X_test)):
+        matrix = turn_pair_matrix(X_test[i], MAXLENGTH)
 
-            pred = model.predict(matrix)
-            pred = np.argmax(pred)
-            gold = np.argmax(y_test[i])
-            output.write("Norm\t%d\t%d\n" % (gold, pred))
-	
-	print "Finished test."
+        pred = model.predict(matrix)
+        pred = np.argmax(pred)
+        gold = np.argmax(y_test[i])
+        confidence = np.max(pred)
+        output.write("Norm\t%d\t%d\n%.2f" % (gold, pred,confidence))
+    
+    print "Finished test."
 
  
-def run_folds(k_fold=False):
+def run_folds():
     # Setup the Folds class.
     folds = read_folds.Folds(read_folds.FOLDS_PATH,
-    read_folds.DATA_PATH[read_folds.ID_CONF],
-    read_folds.DATA_PATH[read_folds.ID_N_CONF])
+        read_folds.DATA_PATH[read_folds.ID_CONF],
+        read_folds.DATA_PATH[read_folds.ID_N_CONF], BINARY)
 
-    if not k_fold:
+    if not K_FOLD:
         # Get test set.
         X_test, y_test = folds.read_test()
 
@@ -123,14 +119,14 @@ def run_folds(k_fold=False):
 
         mean_acc += acc
         mean_loss += loss
-	
+    
         if acc > high_acc:
             high_acc = acc
         if loss < min_loss:
             min_loss = loss
             best_fold = key
-        elif k_fold:
-            run_test(key, X_val, y_val, k_fold=k_fold)
+        elif K_FOLD:
+            run_test(key, X_val, y_val)
         else:
             # Remove the model.
             os.remove(BASE_MODEL_PATH + str(key))
@@ -140,9 +136,9 @@ def run_folds(k_fold=False):
 
     write_results(best_fold, high_acc, min_loss, mean_acc, mean_loss, k_fold=k_fold)
 
-    if not k_fold:
+    if not K_FOLD:
         run_test(best_fold, X_test, y_test)
 
 
 if __name__ == '__main__':
-    run_folds(k_fold=K_FOLD)
+    run_folds()

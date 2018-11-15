@@ -16,15 +16,17 @@ CONF_PATH = '../../data/db_conflicts.csv'
 N_CONF_PATH = '../../data/db_non_conflicts.csv'
 CONF_FILE = '2'
 N_CONF_FILE = '1'
+CONF_CLASS = 1
 N_CONF_CLASS = 0
 RAND_STATE = 22
 N_SPLITS = 10
 TEST_SIZE = 0.1
-FILE_PATH = '../../data/K-fold.json'
+FILE_PATH = '../../data/K-fold_binary.json'
 K_FOLD = True
+BINARY = True
 
 
-def process_data(df, conflict=True):
+def process_data(df, conflict=True, binary=False):
     """
         Extract data and classes from dataframes.
         
@@ -44,7 +46,10 @@ def process_data(df, conflict=True):
         for i, row in df.iterrows():
             conf_ind = str(row['conflict_id'])
             X[counter] = int(CONF_FILE + conf_ind)
-            y[counter] = int(row['conf_type'])
+            if binary:
+                y[counter] = CONF_CLASS
+            else:
+                y[counter] = int(row['conf_type'])
             counter += 1
 
         return X, y
@@ -146,7 +151,7 @@ def main():
     y = np.zeros(total_size, dtype=int)
 
     # Get data.
-    X[:len(df)], y[:len(df)] = process_data(df)
+    X[:len(df)], y[:len(df)] = process_data(df, binary=BINARY)
     
     X_1, y_1 = process_data(df_2, conflict=False)
     X[len(df):total_size], y[len(df):total_size] = X_1[:len(df)], \

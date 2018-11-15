@@ -12,28 +12,34 @@ from os.path import dirname, basename, join, realpath, isfile, splitext
 import pandas as pd
 from collections import OrderedDict
 import numpy as np
+import json
+import fileconfig
 
 import progressbar
 
+# Set constants
+CONFLICT = '2'
+NN_CONFLICT = '1'
+
 def is_file(inputfile, boolean=False):
     """ Check whether the ``inputfile`` corresponds to a file """
-    inputfile = realpath(inputfile)
-    if not isfile(inputfile):
+    if not inputfile or not isfile(inputfile):
         if boolean:
             return False
         logger.error('Input is not a file!')
         sys.exit(0)
+    inputfile = realpath(inputfile)
     return inputfile
 
 
 def is_folder(inputfolder, boolean=False):
     """ Check whether the ``inputfolder`` corresponds to a folder """
-    inputfolder = realpath(inputfolder)
-    if not isdir(inputfolder):
+    if not inputfolder or not isdir(inputfolder):
         if boolean:
             return False
         logger.error('Argument %s is not a folder!' % inputfolder)
         sys.exit(0)
+    inputfolder = realpath(inputfolder)
     return inputfolder
 
 
@@ -69,6 +75,7 @@ class NormPairsFile(object):
         con_id,conf_id,conf_type,norm1,norm2
     """
     def __init__(self, input):
+        self.fc = fileconfig.Configuration()
         self.input = input
         self.df = pd.read_csv(input)
         self.nb_rows = len(self.df)
@@ -144,6 +151,23 @@ class NormPairsFile(object):
             dic[norm1] = id1
             dic[norm2] = id2
         return dic
+
+
+    def pair_from_index(self, index):
+        """ Return the norm pair corresponding to the index """
+        if 'conflict_id' in self.df:
+            row = self.df[self.df['conflict_id'] == index]
+            return (row['sent_id_1'].values[0], 
+                    row['sent_id_2'].values[0], 
+                    row['conf_type'].values[0])
+        elif 'index' in self.df:
+            row = self.df[self.df['index'] == index]
+            return (row['sent_id_1'].values[0], 
+                    row['sent_id_2'].values[0], 
+                    self.fc.get('N_CONFLICT'))
+        else:
+            logger.error('CSV file does not contain a column with identifier.')
+            sys.exit(0)
 #End of class NormPairsFile
 
 
@@ -166,9 +190,65 @@ class DFrameEmbeddings(object):
         try:
             row = dfrow.values.tolist()[0][1:]
         except:
-            print dfrow
-            print '>', id
+            logger.warning(dfrow)
+            logger.warning(id)
         return np.array(row)
 #End of class DFrameEmbeddings
 
 
+class Folds(object):
+    def __init__(self, json_file):
+        self.dfolds = json.load(open(json_file))
+        self.nb_folds = len(self.dfolds.keys()) - 1
+
+
+    def __iter__(self):
+        """
+        Iterate on all folds from json file and yield
+        conflict and non-conflict ids from train and test
+        """
+        for id_fold in range(self.nb_folds):
+            arr = self.dfolds[str(id_fold)]
+            vtrain, vtest = arr['train'], arr['test']
+            cf_train, nn_train = self._vec_norms(vtrain)
+            cf_test, nn_test = self._vec_norms(vtest)
+            yield cf_train, nn_train, cf_test, nn_test
+
+
+    def _vec_norms(self, vnorms):
+        vcf, vnn = [], []
+        for id in vnorms:
+            type, index = str(id)[0], int(str(id)[1:])
+            if type == CONFLICT:
+                vcf.append(index)
+            elif type == NN_CONFLICT:
+                vnn.append(index)
+            else:
+                logger.error('Unknown conflict with ID: %s' % id)
+                logger.error('Norms must start with 1 for non-conflict and 0 for conflict')
+                sys.exit(0)
+        return vcf, vnn
+
+
+    def test(self):
+        """ Get the test set from json file """
+        return self.dfolds['test']
+#End of class Folds
+
+
+def embeddings_from_indexes(normfile, embfile, indexes):
+    """
+    Return a matrix of embeddings and true labels from a list of indexes
+    representing unique norm pairs
+    """
+    vemb, y = [], []
+    fnorm = NormPairsFile(normfile)
+    femb = DFrameEmbeddings(embfile)
+    
+    for index in indexes:
+        id1, id2, lbl = fnorm.pair_from_index(index)
+        emb1 = femb.id2embed(id1)
+        emb2 = femb.id2embed(id2)
+        vemb.append([emb1, emb2])
+        y.append(lbl)
+    return vemb, y
