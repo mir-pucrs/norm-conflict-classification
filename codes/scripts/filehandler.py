@@ -9,12 +9,13 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 from os.path import dirname, basename, join, realpath, isfile, splitext
-import pandas as pd
 from collections import OrderedDict
 import numpy as np
 import json
-import fileconfig
+import pandas as pd
+pd.options.display.max_colwidth = 1000
 
+import fileconfig
 import progressbar
 
 # Set constants
@@ -197,9 +198,19 @@ class DFrameEmbeddings(object):
 
 
 class Folds(object):
-    def __init__(self, json_file):
+    def __init__(self, json_file, cffile, ncfile):
+        """ 
+        json_file: string
+            path to the JSON file containing k-fold splitting
+        cffile: string
+            path to the CSV file containing conflicting pairs
+        ncfile: string
+            path to the CSV file containing non-conflicting pairs
+        """
         self.dfolds = json.load(open(json_file))
         self.nb_folds = len(self.dfolds.keys()) - 1
+        self.cfdata = NormPairsFile(cffile)
+        self.ncdata = NormPairsFile(ncfile)
 
 
     def __iter__(self):
@@ -210,29 +221,49 @@ class Folds(object):
         for id_fold in range(self.nb_folds):
             arr = self.dfolds[str(id_fold)]
             vtrain, vtest = arr['train'], arr['test']
-            cf_train, nn_train = self._vec_norms(vtrain)
-            cf_test, nn_test = self._vec_norms(vtest)
-            yield cf_train, nn_train, cf_test, nn_test
+
+            arr = self._indexes2ids(vtrain)
+            cftr_pairs, cftr_labels, nctr_pairs, nctr_labels = arr
+            arr = self._indexes2ids(vtest)
+            cfts_pairs, cfts_labels, ncts_pairs, ncts_labels = arr
+            yield (cftr_pairs, cftr_labels, nctr_pairs, nctr_labels,
+                   cfts_pairs, cfts_labels, ncts_pairs, ncts_labels)
 
 
-    def _vec_norms(self, vnorms):
-        vcf, vnn = [], []
-        for id in vnorms:
+    def _indexes2ids(self, vfold):
+        cf_pairs, cf_labels = [], []
+        nc_pairs, nc_labels = [], []
+        for id in vfold:
             type, index = str(id)[0], int(str(id)[1:])
             if type == CONFLICT:
-                vcf.append(index)
+                id1, id2, label = self.cfdata.pair_from_index(index)
+                cf_pairs.append((id1, id2))
+                cf_labels.append(label)
             elif type == NN_CONFLICT:
-                vnn.append(index)
+                id1, id2, label = self.ncdata.pair_from_index(index)
+                nc_pairs.append((id1, id2))
+                nc_labels.append(label)
             else:
                 logger.error('Unknown conflict with ID: %s' % id)
                 logger.error('Norms must start with 1 for non-conflict and 0 for conflict')
                 sys.exit(0)
-        return vcf, vnn
+        return (cf_pairs, cf_labels, nc_pairs, nc_labels)
+
+
+    def get_fold(self, nb_fold):
+        arr = self.dfolds[str(nb_fold)]
+        vtrain, vtest = arr['train'], arr['test']
+        cftr_pairs, cftr_labels, nctr_pairs, nctr_labels = self._indexes2ids(vtrain)
+        cfts_pairs, cfts_labels, ncts_pairs, ncts_labels = self._indexes2ids(vtest)
+        return (cftr_pairs, cftr_labels, nctr_pairs, nctr_labels,
+                cfts_pairs, cfts_labels, ncts_pairs, ncts_labels)
 
 
     def test(self):
         """ Get the test set from json file """
-        return self.dfolds['test']
+        arr = self._indexes2ids(self.dfolds['test'])
+        cf_pairs, cf_labels, nc_pairs, nc_labels = arr
+        return (cf_pairs, cf_labels, nc_pairs, nc_labels)
 #End of class Folds
 
 
@@ -252,3 +283,17 @@ def embeddings_from_indexes(normfile, embfile, indexes):
         vemb.append([emb1, emb2])
         y.append(lbl)
     return vemb, y
+
+
+def exclude_existing_pairs(normpairs, existing_pairs):
+    """ 
+    Return a list of pairs excluding the existing pairs 
+
+    filenorms: string
+        path to a CSV file containing non-conflicting pairs
+    existing_pairs: array
+        list of pair ids
+    """
+    all_pairs = normpairs.id_pairs()
+    pairs = set(all_pairs) - set(existing_pairs)
+    return list(pairs)

@@ -12,10 +12,11 @@ import argparse
 import random
 random.seed(32)
 import numpy as np
-import pandas as pd
 from scipy.spatial import distance
 from sklearn import metrics
 from os.path import dirname, basename, join, realpath
+import pandas as pd
+pd.options.display.max_colwidth = 1000
 
 import filehandler as fh
 import parser
@@ -25,6 +26,7 @@ import progressbar
 # Define constants
 CONFLICT = 1
 N_CONFLICT = 0
+
 
 def embeddings_from_norms(normfile, output, wikiuni, jar, fasttext):
     """
@@ -120,6 +122,7 @@ def generate_offset_from_file(normfile, embfile, output):
 
 
 def calculate_distance_offset(pairs, df, offset, offset2=None):
+    # CONVERTED TO calculate_distance_mode
     """
     From a set of pairs, calculate the distance of the offset of the 
     pair in relation to the global offset.
@@ -151,6 +154,84 @@ def calculate_distance_offset(pairs, df, offset, offset2=None):
             vdist.append([cos, euc, cos2, euc2])
         else:
             vdist.append((cos, euc))
+        pb.update()
+        #if i == 1000: break
+    return vdist
+
+
+def apply_mode(pairs, df, mode='offset', average=False):
+    """
+    Apply `mode` (offset, concat or mean) on pairs of embeddings.
+
+    Parameters:
+    -----------
+    pairs: array
+        ids of pairs of norms in the form [(id1, id2), (id2, id3),...]
+    df: pandas.dataframe
+        dataframe containing ids and embeddings of sentences
+    mode: string
+        offset: apply the offset (emb1 - emb2) on embeddings
+        concat: concatenate embedding vectors
+        mean: generate the mean of each cell in embeddings
+    """
+    vres = []
+    for id1, id2 in pairs:
+        emb1 = df.id2embed(id1)
+        emb2 = df.id2embed(id2)
+        if mode == 'offset':
+            comb = emb1 - emb2
+        elif mode == 'concat':
+            comb = np.concatenate((emb1,emb2))
+        elif mode == 'mean':
+            comb = (emb1 + emb2)/2.
+        elif mode == 'other':
+            comb = emb2 - emb1
+            #comb = np.concatenate((emb1,emb2,off))
+        else:
+            logger.error('Mode %s not implemented' % mode)
+            sys.exit(0)
+        vres.append(comb)
+    if average:
+        return np.mean(np.array(vres), axis=0)
+    return vres
+        
+
+def calculate_distance_mode(pairs, df, ref, mode, measure, ref2=[]):
+    """
+    From a set of pairs, calculate the distance of the offset of the 
+    pair in relation to the global offset.
+
+    Parameters:
+    -----------
+    pairs: list
+        list containing tuples of IDs of norms [(id1,id2),(id3,id4)...]
+    df: pandas.dataframe
+        dataframe containing ids and embeddings of sentences
+    ref: np.array
+        vector containing the reference to measure the distance
+    mode: string
+        how vectors are combined (offset, concat or mean)
+    measure: string
+        measure to calculate the distance (euc or cos)
+    ref2: np.array
+        calculate the distance to a second reference
+
+    Return:
+    -------
+        list containing the distance and ids in the form 
+        [(dist, id1, id2), (dist, id2, id3),...]
+    """
+    vdist = []
+    pb = progressbar.ProgressBar(len(pairs))
+    for i, pair in enumerate(pairs):
+        id1, id2 = pair
+        combined = utils.combine(pair, df, mode=mode)
+        dist = utils.calculate_distance(combined, ref, measure=measure)
+        if len(ref2) > 0:
+            dist2 = utils.calculate_distance(combined, ref2, measure=measure)
+            vdist.append((dist, dist2, id1, id2))
+        else:
+            vdist.append((dist, id1, id2))
         pb.update()
         #if i == 1000: break
     return vdist
@@ -193,18 +274,27 @@ def related_offset(pairs, df, offset, n, measure='cos', metric='closest', dist=F
             logger.erro('Measure %s not applicable' % measure)
             sys.exit(0)
 
-    if metric == 'closest':
-        vred = sorted(v)[:n]
-    elif metric == 'farthest':
-        vred = sorted(v, reverse=True)[:n]
-    elif metric == 'random':
-        vred = random.sample(v, n)
-
-    vec = []
-    for arr in vred:
-        if dist:
-            inv = arr[1:]+arr[0]
-            vec.append(tuple(inv))
-        else:
-            vec.append(arr[1:])
+    #hack to change value of dist : fix it
+    dist = not dist
+    vec = utils.apply_metric(v, metric, n, ids_only=dist)
     return vec
+
+
+def distance_to_mode(pairs, df, ref, list_size, mode='offset', measure='cos', metric='closest'):
+    """
+    From a set of pairs, calculate the distance of the offset of the 
+    pair in relation to the global offset. 
+    Return a list of pairs that are the closest/farthest to the offset
+
+    Parameters:
+    -----------
+    pairs: list
+        list containing tuples of IDs of norms [(id1,id2),(id3,id4)...]
+    df: pandas.dataframe
+        dataframe containing ids and embeddings of sentences
+    offset: np.array
+        vector containing the offset of conflicts
+    """
+    distances = calculate_distance_mode(pairs, df, ref, mode, measure)
+    vdist = utils.apply_metric(distances, metric, list_size, ids_only=True)
+    return vdist
