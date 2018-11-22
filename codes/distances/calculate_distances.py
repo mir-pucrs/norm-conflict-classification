@@ -16,16 +16,38 @@ from os.path import join, dirname
 from scripts import filehandler as fh
 from scripts import embeddings
 from scripts import fileconfig as fc
+from scripts import utils
+
+conf = fc.Configuration()
 
 
-def ids_from_indexes(fnorm, indexes):
-    pairs, labels = [], []
-    for index in indexes:
-        id1, id2, lbl = fnorm.pair_from_index(index)
-        pairs.append([id1, id2])
-        labels.append(lbl)
-    return pairs, labels
-    
+def check_distances(vpairs, vground, vdist, fout, distance):
+    """ Save in a file the results """
+    y_true, y_pred = [], []
+    for norms, gtruth, arr in zip(vpairs, vground, vdist):
+        if gtruth > 0: gtruth = 1
+        norm1, norm2 = norms
+        cft_cos, cft_euc, ncft_cos, ncft_euc = arr
+        if distance == 'cos':
+            if cft_cos < ncft_cos:
+                fout.write('%d %d %d %d\n' % (norm1, norm2, conf.get('CONFLICT'), gtruth))
+                y_true.append(gtruth)
+                y_pred.append(conf.get('CONFLICT'))
+            else:
+                fout.write('%d %d %d %d\n' % (norm1, norm2, conf.get('N_CONFLICT'), gtruth))
+                y_true.append(gtruth)
+                y_pred.append(conf.get('N_CONFLICT'))
+        elif distance == 'euc':
+            if cft_euc < ncft_euc:
+                fout.write('%d %d %d %d\n' % (norm1, norm2, conf.get('CONFLICT'), gtruth))
+                y_true.append(gtruth)
+                y_pred.append(conf.get('CONFLICT'))
+            else:
+                fout.write('%d %d %d %d\n' % (norm1, norm2, conf.get('N_CONFLICT'), gtruth))
+                y_true.append(gtruth)
+                y_pred.append(conf.get('N_CONFLICT'))
+    return y_true, y_pred
+
 
 def main(file_folds, cft_file, ncft_file, distance, output):
     # check input files
@@ -37,8 +59,8 @@ def main(file_folds, cft_file, ncft_file, distance, output):
     output = fh.is_file(output, boolean=True)
     if not output:
         output = join(dirname(cft_file), distance+'.txt')
-
-    conf = fc.Configuration()
+    
+    results = utils.KfoldResults()
 
     cft_norms = fh.NormPairsFile(cft_file)
     ncft_norms = fh.NormPairsFile(ncft_file)
@@ -66,37 +88,47 @@ def main(file_folds, cft_file, ncft_file, distance, output):
         cft_dist = embeddings.calculate_distance_offset(vp_cft_ts, cft_dfemb, cft_offset, offset2=ncft_offset)
         ncft_dist = embeddings.calculate_distance_offset(vp_ncft_ts, ncft_dfemb, cft_offset, offset2=ncft_offset)
 
-        fout.write('#fold %d\n' % id_fold)
+        fout.write('#fold: %d\n' % id_fold)
         # check distance for conflicts
-        for gtruth, norms, arr in zip(vl_cft_ts, vp_cft_ts, cft_dist):
-            if gtruth > 0: gtruth = 1
-            norm1, norm2 = norms
-            cft_cos, cft_euc, ncft_cos, ncft_euc = arr
-            if distance == 'cos':
-                if cft_cos < ncft_cos:
-                    fout.write('%d %d %d %d\n' % (norm1, norm2, conf.get('CONFLICT'), gtruth))
-                else:
-                    fout.write('%d %d %d %d\n' % (norm1, norm2, conf.get('N_CONFLICT'), gtruth))
-            elif distance == 'euc':
-                if cft_euc < ncft_euc:
-                    fout.write('%d %d %d %d\n' % (norm1, norm2, conf.get('CONFLICT'), gtruth))
-                else:
-                    fout.write('%d %d %d %d\n' % (norm1, norm2, conf.get('N_CONFLICT'), gtruth))
-        # check distance for non-conflicts
-        for gtruth, norms, arr in zip(vl_ncft_ts, vp_ncft_ts, ncft_dist):
-            if gtruth > 0: gtruth = 1
-            norm1, norm2 = norms
-            cft_cos, cft_euc, ncft_cos, ncft_euc = arr
-            if distance == 'cos':
-                if cft_cos < ncft_cos:
-                    fout.write('%d %d %d %d\n' % (norm1, norm2, conf.get('CONFLICT'), gtruth))
-                else:
-                    fout.write('%d %d %d %d\n' % (norm1, norm2, conf.get('N_CONFLICT'), gtruth))
-            elif distance == 'euc':
-                if cft_euc < ncft_euc:
-                    fout.write('%d %d %d %d\n' % (norm1, norm2, conf.get('CONFLICT'), gtruth))
-                else:
-                    fout.write('%d %d %d %d\n' % (norm1, norm2, conf.get('N_CONFLICT'), gtruth))
+        # pairs, ground, dist, fout, distance
+        y_true, y_pred = check_distances(vp_cft_ts, vl_cft_ts, cft_dist, fout, distance)
+        arr = check_distances(vp_ncft_ts, vl_ncft_ts, ncft_dist, fout, distance)
+        y_true.extend(arr[0])
+        y_pred.extend(arr[1])
+        # check if the fold is the best one
+        results.add(id_fold, y_true, y_pred)
+
+    # add the mean of each measure to the results
+    results.add_mean()
+
+    # get best model and generate the offset
+    best_fold, best_score = results.get_best(metric='accuracy')
+    logger.info('Loading best fold: %d (accuracy: %f)' % (best_fold, best_score))
+    cft_tr, nn_tr, _, _ = fds.get_fold(best_fold)
+    cft_pairs_tr, _ = ids_from_indexes(cft_norms, cft_tr)
+    ncft_pairs_tr, _ = ids_from_indexes(ncft_norms, nn_tr)
+
+    cft_offset = embeddings.generate_offset(cft_pairs_tr, cft_dfemb)
+    ncft_offset = embeddings.generate_offset(ncft_pairs_tr, ncft_dfemb)
+
+    #load test set
+    cft_ts, nn_ts = fds.test()
+    cft_pairs_ts, cft_lbl_ts = ids_from_indexes(cft_norms, cft_ts)
+    ncft_pairs_ts, ncft_lbl_ts = ids_from_indexes(ncft_norms, nn_ts)
+    
+    cft_dist = embeddings.calculate_distance_offset(cft_pairs_ts, cft_dfemb, cft_offset, offset2=ncft_offset)
+    ncft_dist = embeddings.calculate_distance_offset(ncft_pairs_ts, ncft_dfemb, cft_offset, offset2=ncft_offset)
+
+    fout.write('#fold: test\n')
+    # check distance for conflicts
+    # pairs, ground, dist, fout, distance
+    y_true, y_pred = check_distances(cft_pairs_ts, cft_lbl_ts, cft_dist, fout, distance)
+    arr = check_distances(ncft_pairs_ts, ncft_lbl_ts, ncft_dist, fout, distance)
+    y_true.extend(arr[0])
+    y_pred.extend(arr[1])
+    # check if the fold is the best one
+    results.add('test', y_true, y_pred)
+    results.save(join(dirname(cft_file), 'results_'+distance+'.txt'))
     fout.close()
 
 

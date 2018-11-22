@@ -12,10 +12,11 @@ import argparse
 import random
 random.seed(32)
 import numpy as np
-import pandas as pd
 from scipy.spatial import distance
 from sklearn import metrics
 from os.path import dirname, basename, join, realpath
+import pandas as pd
+pd.options.display.max_colwidth = 1000
 
 import filehandler as fh
 import parser
@@ -208,3 +209,42 @@ def related_offset(pairs, df, offset, n, measure='cos', metric='closest', dist=F
         else:
             vec.append(arr[1:])
     return vec
+
+
+def distance_from_existing_offset(pairs, df, offset, list_size, distance='max'):
+    """
+    From a set of pairs, calculate the distance of the offset of the 
+    pair in relation to the global offset. 
+    Return a list of pairs with max/min distance to the offset
+
+    Parameters:
+    -----------
+    pairs: list
+        list containing tuples of IDs of norms [(id1,id2),(id3,id4)...]
+    df: pandas.dataframe
+        dataframe containing ids and embeddings of sentences
+    offset: np.array
+        vector containing the offset of conflicts
+    """
+    label = 0
+    vdist = []
+    pb = progressbar.ProgressBar(len(pairs))
+    for i, arr in enumerate(pairs):
+        emb1 = df.id2embed(arr[0])
+        emb2 = df.id2embed(arr[1])
+        local_offset = emb1 - emb2
+
+        # cosine (similar:0->2:not_similar)
+        #cos = utils.cosine(local_offset, offset)
+        # euclidean distance (similar:0->inf:not_similar)
+        euc = utils.euclidean(local_offset, offset)
+        vdist.append((euc, arr[0], arr[1])) 
+        pb.update()
+        
+    vout = []
+    if distance == 'max':
+        vdist = sorted(vdist, reverse=True)[:list_size]
+    else:
+        vdist = sorted(vdist)[:list_size]
+    vout = [(id1, id2) for _, id1, id2 in vdist]
+    return vout

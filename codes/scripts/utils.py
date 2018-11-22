@@ -67,3 +67,71 @@ def calculate_distance(v1, v2, measure='euc'):
     else:
         logger.error('Measure %s not implemented!' % measure)
         sys.error(0)
+
+
+class KfoldResults(object):
+    def __init__(self, binary=True):
+        self.max_acc = 0
+        self.dresults = {}
+        self.binary = binary
+
+
+    def add(self, nb_fold, ground, predicted):
+        acc = metrics.accuracy_score(ground, predicted)
+        if self.binary:
+            prec, rec, fscore, _ = metrics.precision_recall_fscore_support(ground, predicted, average='binary')
+        else:
+            prec, rec, fscore, _ = metrics.precision_recall_fscore_support(ground, predicted)
+        self.dresults[nb_fold] = {
+            'accuracy': acc,
+            'precision': prec,
+            'recall': rec,
+            'f-score': fscore
+        }
+
+
+    def get_best(self, metric='accuracy'):
+        best_val = 0
+        best_fold = 0
+        for nb_fold in self.dresults:
+            if self.dresults[nb_fold].has_key(metric):
+                score = self.dresults[nb_fold][metric]
+                if score > best_val:
+                    best_val = score
+                    best_fold = nb_fold
+            else:
+                logger.error('Metric %s is not implemented' % metric)
+                sys.exit(0)
+        return best_fold, best_val
+
+
+    def add_mean(self):
+        """ Return the mean of each measure """
+        acc, prec, rec, fscore = 0, 0, 0, 0
+        for nb_fold in self.dresults:
+            acc += self.dresults[nb_fold]['accuracy']
+            prec += self.dresults[nb_fold]['precision']
+            rec += self.dresults[nb_fold]['recall']
+            fscore += self.dresults[nb_fold]['f-score']
+        mean_acc = float(acc)/len(self.dresults)
+        mean_prec = float(prec)/len(self.dresults)
+        mean_rec = float(rec)/len(self.dresults)
+        mean_fscore = float(fscore)/len(self.dresults)
+        self.dresults['mean'] = {
+            'accuracy': mean_acc,
+            'precision': mean_prec,
+            'recall': mean_rec,
+            'f-score': mean_fscore
+        }
+        return mean_acc, mean_prec, mean_rec, mean_fscore
+
+
+    def save(self, fname):
+        """ Save results in a file """
+        with open(fname, 'w') as fout:
+            for nb_fold in self.dresults:
+                fout.write('#Fold: %s\n' % str(nb_fold))
+                fout.write('- Accuracy: %f\n' % self.dresults[nb_fold]['accuracy'])
+                fout.write('- Precision: %f\n' % self.dresults[nb_fold]['precision'])
+                fout.write('- Recall: %f\n' % self.dresults[nb_fold]['recall'])
+                fout.write('- F-score: %f\n' % self.dresults[nb_fold]['f-score'])
