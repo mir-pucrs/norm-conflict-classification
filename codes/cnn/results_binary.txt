@@ -1,0 +1,7 @@
+CNN Classification
+
+Best fold: 5
+Mean Acc: 0.80
+Mean Loss: 0.45
+High Acc: 0.95
+Min Loss: 0.23

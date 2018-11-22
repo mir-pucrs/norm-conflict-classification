@@ -52,6 +52,10 @@ class Configuration(object):
             value = self.dic[key]
             if value.isdigit():
                 return int(value)
+            elif value == 'False':
+                return False
+            elif value == 'True':
+                return True
             return value
         else:
             return ''
